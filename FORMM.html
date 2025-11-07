@@ -1,0 +1,150 @@
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Form Feedback Dash and Leap Obby</title>
+
+  <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+
+  <style>
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body {
+      font-family: Arial, sans-serif;
+      background: url('bagus.jpg') no-repeat center center fixed;
+      background-size: cover;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      min-height: 100vh;
+      padding: 20px;
+      flex-direction: column;
+    }
+    .frame {
+      width: 90%;
+      max-width: 900px;
+      background-color: rgba(74, 124, 89, 0.5);
+      border-radius: 12px;
+      box-shadow: 0 0 15px rgba(0,0,0,0.3);
+      padding: 20px;
+      opacity: 0.95;
+    }
+    .header {
+      background-color: #4A7C59;
+      color: white;
+      text-align: center;
+      padding: 12px;
+      font-size: 1.3em;
+      font-weight: bold;
+      border-radius: 8px;
+      margin-bottom: 20px;
+    }
+    fieldset {
+      border: 1.5px solid #ddd;
+      padding: 15px;
+      margin-bottom: 15px;
+      background: rgba(0,0,0,0.1);
+      border-radius: 8px;
+    }
+    legend { font-weight: bold; color: #f1f1f1; text-shadow: 0 0 3px #000; }
+    .form-group { margin-bottom: 10px; }
+    label { display: block; font-size: 0.9em; color: #f0f0f0; margin-bottom: 5px; }
+    input[type="text"], textarea, select {
+      width: 100%; padding: 8px; border: 1px solid #888; border-radius: 4px;
+      background: rgba(255,255,255,0.7); font-size: 0.9em; color: #222;
+    }
+    input[type="radio"] { margin-right: 5px; transform: scale(0.9); }
+    .gender-group, .rating-group { display: flex; align-items: center; gap: 20px; flex-wrap: wrap; }
+    .buttons { text-align: center; font-weight: bold; margin-top: 20px; }
+    input[type="submit"], input[type="reset"] {
+      padding: 8px 16px; margin: 5px; border: none; border-radius: 6px;
+      font-size: 0.9em; cursor: pointer; color: white; background-color: #48B0AB;
+      transition: all 0.3s;
+    }
+    input[type="submit"]:hover, input[type="reset"]:hover { background-color: #3e9b95; }
+  </style>
+</head>
+<body>
+  <div class="frame">
+    <div class="header">Form Feedback Dash and Leap Obby</div>
+    
+    <form name="submit-to-google-sheet" method="post" action="https://script.google.com/macros/s/AKfycbzXX4MmQRppZItLAbjwzknXkwBSn80AyrDhSHgTCAw0R5jH98j8r0Mpw1LS96Sfv3nE/exec">
+      
+      <fieldset>
+        <legend>BIODATA DIRI</legend>
+        <div class="form-group">
+          <label for="Nama">Nama Pemain</label>
+          <input type="text" id="Nama" name="Nama" placeholder="Ketik nama anda..." required />
+        </div>
+
+        <div class="form-group">
+          <label for="Status">Status</label>
+          <select id="Status" name="Status" required>
+            <option value="">Pilih Status</option>
+            <option>SD</option>
+            <option>SMP</option>
+            <option>SMA</option>
+            <option>SMK</option>
+            <option>Kuliah</option>
+            <option>Kerja</option>
+            <option>Ibu rumah tangga</option>
+            <option>Lainnya</option>
+          </select>
+        </div>
+
+        <div class="form-group">
+          <label for="Username">Nama Username</label>
+          <input type="text" id="Username" name="Username" placeholder="Ketik username roblok anda..." required />
+        </div>
+
+        <div class="form-group">
+          <label>Jenis Kelamin</label>
+          <div class="gender-group">
+            <label><input type="radio" name="Gender" value="Laki-laki" required>Laki-laki</label>
+            <label><input type="radio" name="Gender" value="Perempuan" required>Perempuan</label>
+          </div>
+        </div>
+
+        <div class="form-group">
+          <label>Rating Game</label>
+          <div class="rating-group">
+            <label><input type="radio" name="Rating" value="★" required>😡</label>
+            <label><input type="radio" name="Rating" value="★★">😕</label>
+            <label><input type="radio" name="Rating" value="★★★">😐</label>
+            <label><input type="radio" name="Rating" value="★★★★">😊</label>
+            <label><input type="radio" name="Rating" value="★★★★★">🤩</label>
+          </div>
+        </div>
+      </fieldset>
+
+      <fieldset>
+        <legend>FEEDBACK</legend>
+        <div class="form-group">
+          <label for="Perasaan">Ceritakan perasaan anda saat bermain game:</label>
+          <textarea id="Perasaan" name="Perasaan" rows="3" placeholder="Ketik perasaan anda disini..." required></textarea>
+        </div>
+        <div class="form-group">
+          <label for="Kritik dan Saran">Kritik dan saran untuk game:</label>
+          <textarea id="Kritik dan Saran" name="Kritik dan Saran" rows="3" placeholder="Ketik kritik dan saran tentang game kami disini..." required></textarea>
+        </div>
+      </fieldset>
+
+      <div class="buttons">
+        <input type="submit" value="Submit" />
+        <input type="reset" value="Reset" />
+      </div>
+    </form>
+  </div>
+</body>
+
+  <script>
+    const scriptURL = "https://script.google.com/macros/s/AKfycbzXX4MmQRppZItLAbjwzknXkwBSn80AyrDhSHgTCAw0R5jH98j8r0Mpw1LS96Sfv3nE/exec";
+    const form = document.forms["submit-to-google-sheet"];
+
+    form.addEventListener("submit", (e) => {
+      e.preventDefault();
+      fetch(scriptURL, { method: "POST", body: new FormData(form) })
+        .then(response => swal("Berhasil!", "Data berhasil dikirim ke Spreadsheet!", "success"))
+        .catch(error => swal("Gagal!", "Terjadi kesalahan saat mengirim data!", "error"));
+    });
+  </script>
+</html>
