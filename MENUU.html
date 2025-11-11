@@ -1,0 +1,145 @@
+<html>
+<head>
+	<title>MENU</title>
+	<style>
+		body {
+			background-image: linear-gradient(45deg, #77B5FE, #89CFF0, #FFB6C1, #A66FB5, #FF99CC);
+			background-size: 400% 400%;
+			animation: gradientAnimation 10s ease infinite alternate;
+			font-family: "Gill Sans MT", "Comic Sans MS", cursive;
+			margin: 0;
+			height: 100vh;
+			overflow: hidden;
+			color: #1F2D3A;
+		}
+
+		@keyframes gradientAnimation {
+			0% {
+				background-position: 0% 50%;
+			}
+			50% {
+				background-position: 100% 50%;
+			}
+			100% {
+				background-position: 0% 50%;
+			}
+		}
+
+		.tombol {
+			padding: 20px 25px;
+			text-align: center;
+			font-size: 16px;
+			margin: 4px 0; 
+			cursor: pointer;
+			border-radius: 15px;
+			box-shadow: 0 4px 10px rgba(60, 90, 130, 0.4);
+			transition: 0.3s;
+			width: 160px;
+			display: inline-block;
+			box-sizing: border-box;
+		}
+
+		.tombol1, .tombol2 {
+			background-color: #CFE3FF;
+			border: 4px inset #6A8EB8;
+			color: #1F2D3A;
+			font-size: 18px;
+		}
+
+		.tombol3 {
+			background-color: #E0EEFF;
+			border: 3px ridge #89A7CC;
+			color: #1F2D3A;
+			padding: 10px 20px;
+			display: inline-block;
+			font-size: 14px;
+			font-weight: bold;
+			font-family: "Times New Roman";
+			text-shadow: 1px 1px 3px #E6F0FF;
+			box-shadow: 0 3px 10px rgba(60, 90, 130, 0.4);
+			white-space: nowrap;
+			box-sizing: border-box;
+			width: 200px;
+		}
+
+		.menu-title {
+			background: linear-gradient(to bottom right, #A8CCFF, #D8E8FF);
+			border: 3px solid #608FCB;
+			color: #0E2440;
+			font-size: 22px;
+			padding: 15px 35px;
+			text-shadow: 1px 1px 2px #E8F4FF;
+		}
+
+		.footer .tombol3 {
+			font-size: 12px;
+			padding: 6px 15px;
+			width: auto;
+			cursor: default;
+			pointer-events: none;
+			box-shadow: none;
+			border: 2px solid #AFCBEE;
+			background-color: rgba(225, 240, 255, 0.9);
+		}
+
+		.tombol:hover {
+			transform: scale(1.05);
+			box-shadow: 0 6px 14px rgba(40, 70, 120, 0.6);
+			background-color: #B5D8FF;
+			color: #0E2440;
+		}
+
+		.menu-title:hover {
+			transform: none !important;
+			box-shadow: 0 3px 10px rgba(60, 90, 130, 0.4) !important;
+			background: linear-gradient(to bottom right, #A8CCFF, #D8E8FF) !important;
+			color: #0E2440 !important;
+		}
+
+		a {
+			text-decoration: none;
+			color: #1F2D3A;
+			font-weight: bold;
+		}
+
+		a:hover {
+			color: #0E2440;
+		}
+
+		.footer {
+			position: fixed;
+			bottom: 15px;
+			left: 50%;
+			transform: translateX(-50%);
+			text-align: center;
+			color: #1F2D3A;
+		}
+	</style>
+</head>
+
+<body>
+	<center>
+		<p style="margin-top: 40px;">
+			<button class="tombol tombol3 menu-title"><b>MENU:</b></button>
+		</p>
+
+		<p>
+			<button class="tombol tombol1">
+				<a href="ISI.html" target="ketiga">What’s This?</a>
+			</button>
+		</p>
+
+		<p>
+			<button class="tombol tombol2">
+				<a href="FORMM.html" target="ketiga">Rate the Game!</a>
+			</button>
+		</p>			
+	</center>
+
+	<div class="footer">
+		<button class="tombol tombol3">
+			<b>&#169; Copyright by Angel, Jacksen, Zoen - XIIC</b>
+		</button>
+	</div>
+</body>
+</html>
