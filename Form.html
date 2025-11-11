@@ -1,0 +1,176 @@
+<html>
+<head>
+  <title>FORM</title>
+  <style>
+    body {
+			     background: url('lotm.jpg') no-repeat center center fixed;
+			     font-family: "Comic Sans MS", cursive;
+			     color: #2E473B;
+			     margin: 0;
+			     padding: 0;
+		  }
+	   	h1 {
+			     text-align: center;
+			     margin-top: 40px;
+			     background: rgba(255,255,255,0.4);
+			     display: inline-block;
+			     padding: 10px 30px;
+			     border-radius: 15px;
+			     box-shadow: 0 3px 10px rgba(60,100,60,0.4);
+		    }
+		  form {
+			     background: rgba(255, 255, 255, 0.6);
+			     max-width: 500px;
+			     margin: 40px auto;
+			     padding: 30px;
+			     border-radius: 15px;
+			     box-shadow: 0 4px 15px rgba(0, 50, 0, 0.3);
+		    }
+		   label {
+			     display: block;
+			     font-weight: bold;
+			     margin-top: 10px;
+			     margin-bottom: 5px;
+		    }
+		   input[type="text"], select, textarea {
+			     width: 100%;
+			     padding: 10px;
+			     border: 2px inset #6E9C74;
+			     border-radius: 10px;
+			     box-sizing: border-box;
+			     font-family: "Comic Sans MS", cursive;
+			     resize: none;
+		    }
+		   textarea {
+			     height: 80px;
+		    }
+		  .rating {
+			     display: flex;
+			     justify-content: space-between;
+			     width: 80%;
+			     margin: 10px auto;
+			     font-size: 26px;
+		    }
+		  .rating input {
+			     display: none;
+		    }
+		  .rating label {
+			     cursor: pointer;
+			     transition: transform 0.2s ease, filter 0.2s ease;
+		    }
+		  .rating input:checked + label {
+			     transform: scale(1.3);
+			     filter: drop-shadow(0 0 5px #4A7856);
+		    }
+		  .rating label:hover {
+			     transform: scale(1.2);
+		    }
+		  button {
+			     background-color: #B8D8B5;
+			     border: 3px ridge #6E9C74;
+			     color: #2E473B;
+			     padding: 10px 20px;
+			     font-size: 16px;
+			     border-radius: 12px;
+			     cursor: pointer;
+			     box-shadow: 0 4px 10px rgba(80, 100, 80, 0.4);
+			     transition: 0.3s;
+		    }
+		  button:hover {
+			     transform: scale(1.05);
+			     background-color: #AEE1AF;
+			     box-shadow: 0 6px 14px rgba(50, 80, 50, 0.6);
+		    }
+		  .button-container {
+			     display: flex;
+			     justify-content: space-between;
+			     gap: 20px;
+			     margin-top: 20px;
+		    }
+		  .button-container button {
+			     flex: 1;
+		}
+		button[type="reset"] {
+			background-color: #F3CFC6;
+			border: 3px ridge #D88A7B;
+		}
+		button[type="reset"]:hover {
+			background-color: #F5AFA0;
+			box-shadow: 0 6px 14px rgba(200, 70, 70, 0.5);
+		}
+		footer {
+			text-align: center;
+			font-size: 12px;
+			color: #2E473B;
+			margin-top: 30px;
+			padding-bottom: 10px;
+		}
+</style>
+</head>
+<body>
+<center>
+<h1>Form Feedback</h1>
+</center>
+<form id="dataForm" method="post" action="https://script.google.com/macros/s/AKfycbyD4QrgcT1upwa0G8UPg49ouyj2S95yY7FGh1yo2NYw3fvSaWPgtAZGqww21d3DQNxI/exec">
+	<fieldset>
+		<legend><strong>
+		<h3>BIODATA DIRI</h3>
+		</strong></legend>
+		<label for="Nama">Nama Pemain:</label>
+		<input type="text" id="Nama" name="Nama" maxlength="30" placeholder="Ketik nama anda..." required>
+		<label for="Status">Status:</label>
+		<select id="Status" name="Status" required>
+			<option value="">Pilih Status</option>
+			<option>SD</option>
+			<option>SMP</option>
+			<option>SMA</option>
+			<option>SMK</option>
+			<option>Kuliah</option>
+			<option>Kerja</option>
+			<option>Ibu rumah tangga</option>
+			<option>Lainnya</option>
+		</select>
+		<label for="Username">Nama Username:</label>
+		<input type="text" id="Username" name="Username" maxlength="25" placeholder="Ketik username roblok anda..." required>
+		<label>Jenis Kelamin:</label>
+		<input type="radio" id="Laki-laki" name="Gender" value="Laki-laki" required> Laki-laki <input type="radio" id="Perempuan" name="Gender" value="Perempuan" required> Perempuan <label>Rating Game Kamu:</label>
+		<div class="rating">
+			<input type="radio" id="r1" name="Rating" value="★" required><label for="r1">😡</label>
+			<input type="radio" id="r2" name="Rating" value="★★"><label for="r2">😕</label>
+			<input type="radio" id="r3" name="Rating" value="★★★"><label for="r3">😐</label>
+			<input type="radio" id="r4" name="Rating" value="★★★★"><label for="r4">😊</label>
+			<input type="radio" id="r5" name="Rating" value="★★★★★"><label for="r5">🤩</label>
+		</div>
+	</fieldset>
+	<fieldset>
+		<legend><strong>
+		<h3>FEEDBACK</h3>
+		</strong></legend>
+		<label for="Perasaan">Ceritakan perasaan anda saat bermain game "Obby":</label>
+		<textarea id="Perasaan" name="Perasaan" maxlength="200" placeholder="Ketik perasaan anda disini..." required></textarea>
+		<label for="Kritik dan Saran">Kritik dan saran untuk game "Obby":</label>
+		<textarea id="Kritik dan Saran" name="Kritik dan Saran" maxlength="200" placeholder="Ketik kritik dan saran tentang game kami disini..." required></textarea>
+		<div class="button-container">
+			<button type="submit">Kirim</button>
+			<button type="reset">Reset</button>
+		</div>
+	</fieldset>
+</form>
+<script>
+		const form = document.getElementById("dataForm");
+		form.addEventListener("submit", e => {
+			e.preventDefault(); // cegah reload halaman
+			fetch(form.action, { method: "POST", body: new FormData(form) })
+				.then(response => response.json())
+				.then(data => {
+				alert("✅ Data berhasil dikirim!. Terimakasih sudah mengisi!!");
+				form.reset();
+			})
+			.catch(error => {
+				alert("❌ Gagal mengirim data, coba lagi ya.");
+				console.error("Error:", error);
+			});
+		});
+	</script>
+</body>
+</html>
